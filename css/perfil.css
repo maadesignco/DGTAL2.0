@@ -1,0 +1,95 @@
+@charset "utf-8";
+/****************CONTENEDORPERFIL*****************/
+.perfil{
+    padding: 0px 20px;
+}
+.contenedorperfil{
+    margin: 10px 60px 50px 60px;
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.25);
+    padding: 40px 40px;
+}
+/****************CARD*****************/
+.cardgen{
+	padding: 0px 0px 0px 0px;
+}
+.card{
+	margin: 0px 15px 0px 0px;
+	background:#8c4895;
+	text-align: center;
+	border-radius: 10px;
+}
+.card-body{
+	color:#fff; 
+}
+.card-body .card-title{
+	font-weight: 700;
+}
+
+.imgperfil{
+	margin: 30px 0 20px 0;
+}
+.imgperfil img{
+	border-radius: 20px;
+}
+
+.position-relative {
+  position: relative;
+}
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 20%);
+  color: black;
+  background-color: orange;
+  border-radius: 80%;
+  padding: 15px;
+  	
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.edit-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.edit-icon i {
+  font-size: 20px;
+  margin: 2px 0 0 0; 	
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/****************CONTPERFILDATOS*****************/
+.contperfildatos{
+	padding: 0px 0px 0px 0px;
+}
+/****************FORMULARIO*****************/
+.infoperfil{
+	margin: 0px 0px 0px 15px;
+	padding: 30px 50px;
+	background: #ddd;
+}
+.infoperfil .form-group .camporelleno{
+	display: flex;
+}
+.infoperfil .form-group .camporelleno input{
+	margin: 0px 20px 0px 0px;
+}
+.infoperfil .form-group .camporelleno a i{
+	font-size: 20pt;
+	margin: 5px 0px 0px 0px;
+	color: #8c4895;
+	transition: 0.3s;
+}
+.infoperfil .form-group .camporelleno a i:hover{
+	color: #48c1be;
+}
+/****************PERFILPUBLICIDAD*****************/
+.perfilpublicidad img{
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.6);
+}
+/****************PERFILPUBLICIDAD*****************/

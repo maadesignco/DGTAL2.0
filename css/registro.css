@@ -1,0 +1,21 @@
+@charset "utf-8";
+/****************BANNERBIENVENIDA*****************/
+.bannerbienvenida{
+	background: #48c1be;
+	text-align: center;
+}
+/****************FORMSREGISTRO*****************/
+.formsregistro .row{
+	margin: 40px 60px;
+	padding: 30px 20px;
+	background: #e8e8e8;
+}
+.iniciosesion, .registro{
+	padding: 30px 30px;
+	background: #ccc;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+.iniciosesion .form-check-label{
+	margin: 0px 0px 10px 0px;
+}

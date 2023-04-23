@@ -1,0 +1,66 @@
+@charset "utf-8";
+/****************TXTADICIONAL*****************/
+.textoadicional{
+	text-align: center;
+}
+/****************CONTPAGO*****************/
+.contpago{
+	background: #e8e8e8;
+	padding: 30px;
+	display: flex;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+/****************PAGOPASO1*****************/
+.continfopagopaso1{
+	background: #ccc;
+	padding: 30px 30px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+.continfopagopaso1 h2{
+	font-size: 18pt;
+	text-align: center;
+}
+.botonespagopaso1{
+	text-align: center;
+}
+.botonespagopaso1 button{
+	
+}
+/****************PAGOPASO2*****************/
+.continfopagopaso2{
+	background: #ccc;
+	padding: 30px 50px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+.continfopagopaso2 h2{
+	font-size: 18pt;
+	text-align: center;
+}
+/****************FORMPAGO*****************/
+.form-group{
+	display: flex;
+}
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  border-radius: 0;
+  border: 2px solid #ccc;
+}
+
+.form-control:focus {
+  border-color: #8FB8DE;
+  box-shadow: none;
+}
+.form-group button{
+	margin: 15px 0px 0px 0px;
+}
+/****************FOOTER*****************/
+footer{
+	margin: 40px 0px 0px 0px;
+}
