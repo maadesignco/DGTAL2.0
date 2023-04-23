@@ -1,23 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Untitled Document</title>
-    <!-- Bootstrap -->
-	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Solar</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<link rel="stylesheet" href="css/dgverso.css">
+</head>
+<body>
+	<div id="message-container">
+		<div id="message">
+		  <p>Bienvenido al Sistema Solar.</p>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iusto suscipit eaque placeat nulla, doloribus distinctio, voluptates dolor laboriosam laborum aliquam dolorem.</p>		
+		  <button id="close-button">Cerrar</button>
+		</div>
+	  </div>
+	<!-------------------------------------------------------------------------------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/controls/OrbitControls.js"></script>
+	<script>
+		const scene = new THREE.Scene();
+		
+		//BACKGROUND
+		scene.background = new THREE.Color("");
+		
+		const loader = new THREE.TextureLoader();
+		loader.load("dgversotextures/fondo.jpg", function(texture) {
+			scene.background = texture;
+		});
+		////////////////////////////////////////////////////
+		
+		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		camera.position.set(0, 0, 15);
+		
+		// Limites del desplazamiento horizontal
+		var maxX = 10;
+		var minX = -10;
+
+		// Variables para almacenar la posición del dedo en la pantalla
+		var touchX;
+
+		// Agregar un evento táctil a la ventana
+		window.addEventListener('touchstart', function(event) {
+			// Obtener la posición horizontal del dedo en la pantalla
+			touchX = event.touches[0].clientX;
+		});
+
+		window.addEventListener('touchmove', function(event) {
+			// Obtener la posición horizontal actual del dedo en la pantalla
+			var currentTouchX = event.touches[0].clientX;
+
+			// Calcular la diferencia de posición horizontal desde el último toque
+			var deltaX = touchX - currentTouchX;
+
+			// Verificar si la cámara está dentro de los límites antes de moverla
+			if (camera.position.x + (deltaX * 0.01) > minX && camera.position.x + (deltaX * 0.01) < maxX) {
+				// Mover la cámara horizontalmente en la dirección opuesta al desplazamiento del dedo
+				camera.position.setX(camera.position.x + (deltaX * 0.01));
+			}
+
+			// Actualizar la posición del dedo en la pantalla
+			touchX = currentTouchX;
+		});
+
+		// Agregar un evento de teclado a la ventana
+		window.addEventListener('keydown', function(event) {
+			switch (event.keyCode) {
+				// Si se presiona la flecha izquierda, mover la cámara hacia la izquierda si no supera los límites
+				case 37:
+					if (camera.position.x > minX) {
+						camera.position.setX(camera.position.x - 0.1);
+					}
+					break;
+				// Si se presiona la flecha derecha, mover la cámara hacia la derecha si no supera los límites
+				case 39:
+					if (camera.position.x < maxX) {
+						camera.position.setX(camera.position.x + 0.1);
+					}
+					break;
+			}
+		});
+
+		////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		const renderer = new THREE.WebGLRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+		
+		//PLANETAS Y SOL
+		const sunLight = new THREE.PointLight(0xffffff, 1);
+		sunLight.position.set(0, 0, 0);
+		scene.add(sunLight);
+		const sunGeometry = new THREE.SphereGeometry(2, 32, 32);
+		const textureLoader0 = new THREE.TextureLoader().load( 'dgversotextures/sol.jpg' );
+		const sunMaterial = new THREE.MeshBasicMaterial({ map: textureLoader0 });
+		const sunMesh = new THREE.Mesh(sunGeometry, sunMaterial);
+		scene.add(sunMesh);
+		
+		const planetGeometry1 = new THREE.SphereGeometry(0.8, 32, 32);
+		const textureLoader1 = new THREE.TextureLoader().load( 'dgversotextures/jupiter.jpg' );
+		const planetMaterial1 = new THREE.MeshBasicMaterial( { map: textureLoader1 } );
+		const planetMesh1 = new THREE.Mesh(planetGeometry1, planetMaterial1);
+		planetMesh1.position.set(5, 0, 0);
+		scene.add(planetMesh1);
+
+		const planetGeometry2 = new THREE.SphereGeometry(0.75, 32, 32);
+		const textureLoader2 = new THREE.TextureLoader().load( 'dgversotextures/marte.jpg' );
+		const planetMaterial2 = new THREE.MeshBasicMaterial({ map: textureLoader2 });
+		const planetMesh2 = new THREE.Mesh(planetGeometry2, planetMaterial2);
+		planetMesh2.position.set(-8, 0, 0);
+		scene.add(planetMesh2);
+
+		const planetGeometry3 = new THREE.SphereGeometry(1, 32, 32);
+		const textureLoader3 = new THREE.TextureLoader().load( 'dgversotextures/urano.jpg' );
+		const planetMaterial3 = new THREE.MeshBasicMaterial({ map: textureLoader3 });
+		const planetMesh3 = new THREE.Mesh(planetGeometry3, planetMaterial3);
+		planetMesh3.position.set(0, 8, 0);
+		scene.add(planetMesh3);
+
+		const planetGeometry4 = new THREE.SphereGeometry(1.25, 32, 32);
+		const textureLoader4 = new THREE.TextureLoader().load( 'dgversotextures/mercurio.jpg' );
+		const planetMaterial4 = new THREE.MeshBasicMaterial({ map: textureLoader4 });
+		const planetMesh4 = new THREE.Mesh(planetGeometry4, planetMaterial4);
+		planetMesh4.position.set(0, -12, 0);
+		scene.add(planetMesh4);
+
+		//GRUPO DE PLANETAS
+		const planetsGroup = new THREE.Group();
+		planetsGroup.add(planetMesh1, planetMesh2, planetMesh3, planetMesh4);
+		scene.add(planetsGroup);
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// Agrega un raycaster para detectar clics en los planetas
+		var raycaster = new THREE.Raycaster();
+		var mouse = new THREE.Vector2();
+
+		// Función que se ejecuta al hacer clic en la escena
+		function onClick( event ) {
+		// Calcula la posición del clic en coordenadas normalizadas (-1 a 1)
+		mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+		mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+
+		// Lanza un rayo desde la cámara en la dirección del clic
+		raycaster.setFromCamera( mouse, camera );
+
+		// Detecta si el rayo intersecta con algún objeto en la escena
+		var intersects = raycaster.intersectObjects( scene.children );
+
+		// Si el rayo intersecta con un objeto, verifica si es un planeta y navega a otra página
+		if ( intersects.length > 0 ) {
+			var planet = intersects[0].object;
+			if ( planet === planetMesh1 ) {
+				window.location.href = "https://es.wikipedia.org/wiki/Tierra";
+			} else if ( planet === planetMesh2 ) {
+				window.location.href = "https://es.wikipedia.org/wiki/Marte";
+			} else if ( planet === planetMesh3 ) {
+				window.location.href = "https://es.wikipedia.org/wiki/J%C3%BApiter";
+			} else if ( planet === planetMesh4 ) {
+				window.location.href = "https://es.wikipedia.org/wiki/J%C3%BApiter";
+			}
+			}	
+		}
 	
-  </head>
-  <body>
-  	<!-- body code goes here -->
+		// Agrega un event listener para detectar clics en la escena
+		window.addEventListener( 'click', onClick, false );
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//POSICIÓN DE PLANETAS
+		function updatePlanetsPosition(time) {
+			const planetRadius1 = 7;
+			const planetRadius2 = 4;
+			const planetRadius3 = 5;
+			const planetRadius4 = 6;
+			const planetSpeed1 = 0.0001;
+			const planetSpeed2 = 0.00007;
+			const planetSpeed3 = 0.00008;
+			const planetSpeed4 = 0.00009;
+			sunMesh.rotation.y += 0.0008; 
+			planetMesh1.position.x = planetRadius1 * Math.cos(time * planetSpeed1 + Math.PI/2);
+			planetMesh1.position.z = planetRadius1 * Math.sin(time * planetSpeed1 + Math.PI/2);
+			planetMesh1.rotation.y += 0.001;
+			planetMesh1.rotation.z += 0.0005;
+			planetMesh2.position.x = planetRadius2 * Math.cos(time * planetSpeed2);
+			planetMesh2.position.z = planetRadius2 * Math.sin(time * planetSpeed2);
+			planetMesh2.rotation.y += 0.001;
+			planetMesh2.rotation.z += 0.0005;
+			planetMesh3.position.x = planetRadius3 * Math.cos(time * planetSpeed3 + Math.PI);
+			planetMesh3.position.y = planetRadius3 * Math.sin(time * planetSpeed3 + Math.PI);
+			planetMesh3.rotation.y += 0.001;
+			planetMesh3.rotation.z += 0.0005;
+			planetMesh4.position.x = planetRadius4 * Math.cos(time * planetSpeed4);
+			planetMesh4.position.y = planetRadius4 * Math.sin(time * planetSpeed4);
+			planetMesh4.rotation.y += 0.001;
+			planetMesh4.rotation.z += 0.0005;
+			}
+		
+		//BUCLE Y RENDER
+		function animate(time) {
+		requestAnimationFrame(animate);
+		updatePlanetsPosition(time);
+		renderer.render(scene, camera);
+		}
 
+		animate();
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-	<script src="js/jquery-3.4.1.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/popper.min.js"></script> 
-	<script src="js/bootstrap-4.4.1.js"></script>
-  </body>
+    </script>
+	<!--------------------------------------------------------------------------------------------------------------------------->
+	<script>
+		// Obtener el elemento del mensaje y el botón de cierre
+		const messageContainer = document.getElementById('message-container');
+		const message = document.getElementById('message');
+		const closeButton = document.getElementById('close-button');
+	
+		// Ocultar el mensaje cuando se hace clic en el botón de cierre
+		closeButton.addEventListener('click', function() {
+		  messageContainer.style.display = 'none';
+		});
+	
+		// Mostrar el mensaje al cargar la página
+		messageContainer.style.display = 'block';
+	  </script>
+</body>
 </html>
