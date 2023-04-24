@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
     <title>Sistema Solar</title>
 	<style>
 		body {
@@ -26,6 +27,7 @@
 		  <button id="close-button">Cerrar</button>
 		</div>
 	  </div>
+			
 	<!-------------------------------------------------------------------------------------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/controls/OrbitControls.js"></script>
@@ -41,6 +43,11 @@
 		loader.load("dgversotextures/fondo.jpg", function(texture) {
 			scene.background = texture;
 		});
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//INSTRUCCIONES
@@ -117,9 +124,12 @@
 
 		////////////////////////////////////////////////////////////////////////////////////////////////////
 		
-		const renderer = new THREE.WebGLRenderer();
+		const renderer = new THREE.WebGLRenderer({ antialias: true });
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		document.body.appendChild(renderer.domElement);
+		
+		var pixelRatio = window.devicePixelRatio;
+		renderer.setPixelRatio(pixelRatio);
 		//ESTRELLAS ALEATORIAS//////////////////////////////////////////////////////////////////////////////////////
 		
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -229,6 +239,10 @@
 			planetMesh4.rotation.z += 0.0005;
 			}
 		
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		//////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
 		//BUCLE Y RENDER
 		function animate(time) {
 		requestAnimationFrame(animate);
@@ -254,5 +268,12 @@
 		// Mostrar el mensaje al cargar la página
 		messageContainer.style.display = 'block';
 	  </script>
+	
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
 </body>
 </html>
