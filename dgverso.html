@@ -29,7 +29,9 @@
 	<!-------------------------------------------------------------------------------------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/three@0.135.0/build/three.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/three@0.135.0/examples/js/controls/OrbitControls.js"></script>
-	<script>
+	
+	<script type="module">
+
 		const scene = new THREE.Scene();
 		
 		//BACKGROUND
@@ -40,13 +42,34 @@
 			scene.background = texture;
 		});
 		////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//INSTRUCCIONES
+		const texture = loader.load('dgversotextures/textointro.png');
+
+		// Crea un material utilizando la imagen como mapa de textura
+		const material = new THREE.MeshBasicMaterial({
+		  map: texture,
+		  alphaTest: 0.5, // Ajusta el valor para cambiar la transparencia
+		  transparent: true, // Activa la transparencia
+		});
+
+		// Crea un objeto plano utilizando la imagen como mapa de textura
+		const geometry = new THREE.PlaneGeometry(11, 4.5); // Ancho y alto del plano
+		const plane = new THREE.Mesh(geometry, material);
+
+		// Ajusta la posición del objeto plano
+		plane.position.set(-15.5, 0, 0);
+
+		// Agrega el objeto plano a la escena
+		scene.add(plane);
+		////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 		camera.position.set(0, 0, 15);
 		
 		// Limites del desplazamiento horizontal
-		var maxX = 10;
-		var minX = -10;
+		var maxX = 18;
+		var minX = -18;
 
 		// Variables para almacenar la posición del dedo en la pantalla
 		var touchX;
@@ -97,7 +120,9 @@
 		const renderer = new THREE.WebGLRenderer();
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		document.body.appendChild(renderer.domElement);
+		//ESTRELLAS ALEATORIAS//////////////////////////////////////////////////////////////////////////////////////
 		
+		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//PLANETAS Y SOL
 		const sunLight = new THREE.PointLight(0xffffff, 1);
 		sunLight.position.set(0, 0, 0);
