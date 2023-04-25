@@ -1,0 +1,8 @@
+@charset "utf-8";
+body{
+	background: url("../../dgversotextures/fondo.jpg")
+}
+.personajedgtal h2{
+	color: #fff;
+	text-align: center;
+}

@@ -17,13 +17,22 @@ body{
   }
   
   #message {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+	  position: fixed;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  background-color: white;
+	  padding: 20px;
+	  border-radius: 10px;
+	  text-align: center;
   }
   
   #close-button {
     margin-top: 10px;
   }
+#miBoton{
+	border: none;
+	background: inherit;
+	color:#fff;
+}
   

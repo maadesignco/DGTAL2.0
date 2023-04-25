@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-    <title>Sistema Solar</title>
+	<link href="css/index.css" rel="stylesheet">
+    <title>DGverso-Inicio</title>
 	<style>
 		body {
 			margin: 0;
@@ -24,8 +25,12 @@
 		<div id="message">
 		  <p>Bienvenido al Sistema Solar.</p>
 		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iusto suscipit eaque placeat nulla, doloribus distinctio, voluptates dolor laboriosam laborum aliquam dolorem.</p>		
-		  <button id="close-button">Cerrar</button>
+		  <button class="btn" id="close-button">Cerrar</button>
 		</div>
+	  </div>
+	
+	<div id="boton-container" class="btn">
+		<button id="miBoton">Regresa</button>
 	  </div>
 			
 	<!-------------------------------------------------------------------------------------------------------------------------->
@@ -130,7 +135,6 @@
 		
 		var pixelRatio = window.devicePixelRatio;
 		renderer.setPixelRatio(pixelRatio);
-		//ESTRELLAS ALEATORIAS//////////////////////////////////////////////////////////////////////////////////////
 		
 		////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//PLANETAS Y SOL
@@ -196,11 +200,11 @@
 		if ( intersects.length > 0 ) {
 			var planet = intersects[0].object;
 			if ( planet === planetMesh1 ) {
-				window.location.href = "https://es.wikipedia.org/wiki/Tierra";
+				window.location.href = "dgverso/dgdisenador.html";
 			} else if ( planet === planetMesh2 ) {
-				window.location.href = "https://es.wikipedia.org/wiki/Marte";
+				window.location.href = "dgverso/dgpieza.html";
 			} else if ( planet === planetMesh3 ) {
-				window.location.href = "https://es.wikipedia.org/wiki/J%C3%BApiter";
+				window.location.href = "dgverso/dgevento.html";
 			} else if ( planet === planetMesh4 ) {
 				window.location.href = "https://es.wikipedia.org/wiki/J%C3%BApiter";
 			}
@@ -209,7 +213,23 @@
 	
 		// Agrega un event listener para detectar clics en la escena
 		window.addEventListener( 'click', onClick, false );
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		// BOTON
+		//Selecciona el contenedor del botón y agrega un controlador de eventos
+			const botonContainer = document.querySelector('#boton-container');
+			const miBoton = document.querySelector('#miBoton');
+			miBoton.addEventListener('click', function() {
+			  console.log('¡Haz hecho clic en el botón!');
+			  window.history.back();
+			});
+
+			// Posiciona el contenedor del botón en la escena utilizando CSS
+			botonContainer.style.position = 'absolute';
+			botonContainer.style.bottom = '30px';
+			botonContainer.style.left = '50%';
+			botonContainer.style.transform = 'translateX(-50%)';
+			botonContainer.style.zIndex = '1';	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		//POSICIÓN DE PLANETAS
 		function updatePlanetsPosition(time) {
 			const planetRadius1 = 7;
@@ -239,8 +259,6 @@
 			planetMesh4.rotation.z += 0.0005;
 			}
 		
-		///////////////////////////////////////////////////////////////////////////////////////////////////////////
-		
 		//////////////////////////////////////////////////////////////////////////////////////////////////////////
 		
 		//BUCLE Y RENDER
@@ -259,6 +277,8 @@
 		const messageContainer = document.getElementById('message-container');
 		const message = document.getElementById('message');
 		const closeButton = document.getElementById('close-button');
+		
+		messageContainer.style.zIndex = '3';
 	
 		// Ocultar el mensaje cuando se hace clic en el botón de cierre
 		closeButton.addEventListener('click', function() {
