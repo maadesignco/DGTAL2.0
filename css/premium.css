@@ -4,6 +4,9 @@
 	text-align: center;
 }
 /****************CONTPAGO*****************/
+.pagos{
+	padding: 0 50px;
+}
 .contpago{
 	background: #e8e8e8;
 	padding: 30px;
@@ -25,8 +28,12 @@
 .botonespagopaso1{
 	text-align: center;
 }
-.botonespagopaso1 button{
-	
+.btn1 h2, .btn h2{
+	margin: 8px 0 0 0;
+}
+.btn1 h5, .btn2 h5{
+	font-size: 12pt;
+	font-weight: 300;
 }
 /****************PAGOPASO2*****************/
 .continfopagopaso2{
@@ -63,4 +70,46 @@
 /****************FOOTER*****************/
 footer{
 	margin: 40px 0px 0px 0px;
+}
+/**********************************************************************************************/
+@media only screen and (max-width:991.98px){
+	.pagopaso1{
+		margin: 0px 0px 20px 0px;
+	}
+	.botonespagopaso1 .btn1{
+		margin: 0px 0px 15px 0px;
+	}
+}
+
+@media only screen and (max-width:575.98px){
+	.textoadicional{
+		padding: 0 20px;
+	}
+	.textoadicional h3{
+		font-size: 15pt;
+	}
+	.pagos{
+		padding: 10px 20px;
+	}
+	.contpago{
+		padding: 20px 10px;
+	}
+	.btn1 h5, .btn2 h5{
+		font-size: 12pt;
+		font-weight: 300;
+	}
+	.continfopagopaso1 h2, .continfopagopaso2 h2{
+		font-size: 15pt;
+	}
+	.imgpse{
+		text-align: center;
+	}
+	.banco{
+		margin: 20px 0 0 0;
+		text-align: center;
+	}
+	.banco h5{
+		font-size: 12pt;
+		text-align: center;
+	}
 }

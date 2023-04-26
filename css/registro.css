@@ -19,3 +19,26 @@
 .iniciosesion .form-check-label{
 	margin: 0px 0px 10px 0px;
 }
+/**********************************************************************************/
+@media only screen and (max-width:991.98px){
+	.inises{
+		margin: 0px 0px 30px 0px;
+	}
+}
+
+@media only screen and (max-width:575.98px){
+	.inises{
+		margin: 0px 0px 23px 0px;
+	}
+	.bannerbienvenida{
+		padding: 50px;
+	}
+	.bannerbienvenida h1{
+		font-size: 25pt;
+		font-weight: 500;
+	}
+	.formsregistro .row{
+		margin: 30px 5px;
+		padding: 20px 10px;
+	}
+}
