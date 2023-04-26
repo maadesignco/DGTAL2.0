@@ -6,3 +6,60 @@ body{
 	color: #fff;
 	text-align: center;
 }
+/****************CONTENEDOROBRAS*****************/
+.continfo{
+	margin: 20px 50px;
+	border-radius: 10px;
+}
+/****************IMGESTRELLA*****************/
+.imgestrella{
+	display:flex; 
+	align-items: center; 
+	justify-content: center;
+}
+/****************DESCRIPCIONESTRELLA*****************/
+.descripcionestrella{
+	padding: 50px;
+}
+.descripcionestrella h5{
+	font-size: 15pt;
+	font-weight: 300;
+}
+/****************CARRUSELOBRAS*****************/
+.carruselobras{
+	padding: 0 50px;
+}
+.botonregreso{
+	margin: 30px 0px;
+}
+
+
+
+/*********************************************************************************************************/
+@media only screen and (max-width:991.98px){
+	
+}
+
+@media only screen and (max-width:575.98px){
+	.personajedgtal h2{
+		color: #fff;
+		text-align: center;
+		font-size: 18pt;
+	}
+	.continfo{
+		margin: 20px 20px;
+	}
+	.descripcionestrella{
+		padding: 30px;
+	}
+	.descripcionestrella h1{
+		font-size: 20pt;
+	}
+	.descripcionestrella h5{
+		font-size: 14pt;
+		font-weight: 300;
+	}	
+	.carruselobras{
+		padding: 0 20px;
+	}
+}

@@ -115,29 +115,57 @@ body{
 	grid-template-rows: 250px 250px;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 25px;
+	position: relative; 
 }
 .noticiasten{
-	background: gray;
+	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.noticiasten .text {
+	position: absolute; 
+	bottom: -50px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background: #fff;
+	padding: 10px;
+	text-align: center;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+}
+.noticiasten:hover .text {
+	bottom: 0;
+	opacity: 1;
+}
+.noticiasten a {
+	display: block;
 }
 .noticiasten.uno{
 	grid-column: 1/2;
 	grid-row: 1/2;
+	background-image: url("../dgversotextures/jupiter.jpg");
 }
 .noticiasten.dos{
 	grid-column: 1/2;
 	grid-row: 2/3;
+	background-image: url("../dgversotextures/jupiter.jpg");
 }
 .noticiasten.tres{
 	grid-column: 2/3;
 	grid-row: 1/3;
+	background-image: url("../dgversotextures/jupiter.jpg");
 }
 .noticiasten.cuatro{
 	grid-column: 3/4;
 	grid-row: 1/2;
+	background-image: url("../dgversotextures/jupiter.jpg");
 }
 .noticiasten.cinco{
 	grid-column: 3/4;
 	grid-row: 2/3;
+	background-image: url("../dgversotextures/jupiter.jpg");
 }
 /****************FOOTER*****************/
 footer{
@@ -236,6 +264,54 @@ footer a, footer ul li a{
 	.noticiasact.cuatro{
 		grid-column: 1/2;
 		grid-row: 4/5;
+		background-image: url("../dgversotextures/jupiter.jpg");
+	}
+	.gridnoticiasten{
+		padding: 0;
+		display: grid;
+		grid-template-rows: 300px 300px 300px 300px 300px;
+		grid-template-columns: 1fr;
+		grid-gap: 25px 0px;
+	}
+	.tendencia{
+		padding: 50px 30px;
+	}
+	.actualidad h1, .tendencia h1{
+		text-align: center;
+		font-size: 22pt;
+	}
+	.tendencia .titulonot{
+		text-align: center;
+		font-size: 14pt;
+		background: rgba(69,68,68,0.46);
+		color: #fff;
+	}
+	.noticiasten h1{
+		font-size: 18pt; 
+	}
+	.noticiasten.uno{
+		grid-column: 1/2;
+		grid-row: 1/2;
+		background-image: url("../dgversotextures/jupiter.jpg");
+	}
+	.noticiasten.dos{
+		grid-column: 1/2;
+		grid-row: 2/3;
+		background-image: url("../dgversotextures/jupiter.jpg");
+	}
+	.noticiasten.tres{
+		grid-column: 1/2;
+		grid-row: 3/4;
+		background-image: url("../dgversotextures/jupiter.jpg");
+	}
+	.noticiasten.cuatro{
+		grid-column: 1/2;
+		grid-row: 4/5;
+		background-image: url("../dgversotextures/jupiter.jpg");
+	}
+	.noticiasten.cinco{
+		grid-column: 1/2;
+		grid-row: 5/6;
 		background-image: url("../dgversotextures/jupiter.jpg");
 	}
 }
