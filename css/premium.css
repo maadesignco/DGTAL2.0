@@ -2,7 +2,20 @@
 /****************TXTADICIONAL*****************/
 .textoadicional{
 	text-align: center;
+	font-size: 17pt;
+	padding: 20px 40px;
 }
+/*************JUMBOOTRON****************/
+	/******/
+	.jumbotronpublicidad .p1{
+		font-weight: 600;
+		font-size: 16pt;
+	}
+	.jumbotronpublicidad .p2{
+		font-weight: 500;
+		font-size: 14pt;
+	}
+	/******/
 /****************CONTPAGO*****************/
 .pagos{
 	padding: 0 50px;
@@ -73,6 +86,15 @@ footer{
 }
 /**********************************************************************************************/
 @media only screen and (max-width:991.98px){
+	.textoadicional h3{
+		font-size: 16pt;
+		padding: 0px 40px;
+	}
+	/******/
+	.jumbotronpublicidad{
+		padding: 50px 60px;
+	}
+	/******/
 	.pagopaso1{
 		margin: 0px 0px 20px 0px;
 	}
@@ -81,7 +103,30 @@ footer{
 	}
 }
 
+@media only screen and (max-width:767.98px){
+	.banco{
+		text-align: center;
+		margin: 10px 0;
+	}
+	.imgpse{
+		text-align: center;
+		padding: 10px 0;
+	}
+}
+
 @media only screen and (max-width:575.98px){
+	/******/
+	.jumbotronpublicidad{
+		padding: 50px 20px;
+	}
+	.jumbotronpublicidad .p1{
+		font-size: 14pt;
+	}
+	.jumbotronpublicidad .p2{
+		text-align: left;
+		font-size: 12pt;
+	}
+	/******/
 	.textoadicional{
 		padding: 0 20px;
 	}

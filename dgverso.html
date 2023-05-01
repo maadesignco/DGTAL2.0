@@ -23,14 +23,17 @@
 <body>
 	<div id="message-container">
 		<div id="message">
-		  <p>Bienvenido al Sistema Solar.</p>
-		  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus iusto suscipit eaque placeat nulla, doloribus distinctio, voluptates dolor laboriosam laborum aliquam dolorem.</p>		
+		  <p>Bienvenid@ al DGverso.</p>
+		  <p>¡Hola viajer@!. Esta una manera distinta de culturizarte.</p>
+		  <p>Cada planeta tiene algo preparado para ti. Para entrar en ellos solo debes seleccionar aquel al que desees ir.</p>
+		  <p>Si necesitas desplazarte horizontalmente, puedes hacer scroll con tus dedos en celular. Si estás en computador puedes usar las flechas del teclado.</p>
+		  <p>Ahora que ya sabes todo, ¡A viajar!</p> 	
 		  <button class="btn" id="close-button">Cerrar</button>
 		</div>
 	  </div>
 	
 	<div id="boton-container" class="btn">
-		<button id="miBoton">Regresa</button>
+		<button id="miBoton">Salir</button>
 	  </div>
 			
 	<!-------------------------------------------------------------------------------------------------------------------------->
@@ -102,7 +105,7 @@
 			// Verificar si la cámara está dentro de los límites antes de moverla
 			if (camera.position.x + (deltaX * 0.01) > minX && camera.position.x + (deltaX * 0.01) < maxX) {
 				// Mover la cámara horizontalmente en la dirección opuesta al desplazamiento del dedo
-				camera.position.setX(camera.position.x + (deltaX * 0.01));
+				camera.position.setX(camera.position.x + (deltaX * 0.02));
 			}
 
 			// Actualizar la posición del dedo en la pantalla

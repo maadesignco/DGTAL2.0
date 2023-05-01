@@ -143,7 +143,7 @@ body{
 }
 .jumbotronpublicidad .p1{
 	font-size: 16pt;
-	font-weight: 400;
+	font-weight: 500;
 }
 .jumbotronpublicidad .p2{
 	font-size: 18pt;
@@ -379,6 +379,20 @@ footer a, footer ul li a{
 		grid-column: 1/2;
 		grid-row: 4/5;
 	}
+	
+	/******/
+	.jumbotronpublicidad{
+		padding: 50px 20px;
+		text-align: center;
+	}
+	.jumbotronpublicidad .p1{
+		font-weight: 500;
+		font-size: 14pt;
+	}
+	.jumbotronpublicidad .p2{
+		font-size: 16pt;
+	}
+	/******/
 	
 	.gridnoticiasten{
 		padding: 0;
