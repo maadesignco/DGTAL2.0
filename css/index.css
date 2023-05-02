@@ -214,7 +214,7 @@ body{
 .noticiasten.cinco{
 	grid-column: 3/4;
 	grid-row: 2/3;
-	background-image: url("../dgversotextures/jupiter.jpg");
+	background-image: url("../noticias/n9/1.jpeg");
 }
 .tenuno, .tendos, .tencuatro, .tencinco{
 	text-decoration: none;
