@@ -51,7 +51,8 @@ body{
 		align-items: center;
   }
 	#message{
-		font-size: 9pt;	
+		font-size: 9pt;
+		width: 90%;
   }
 }
   
