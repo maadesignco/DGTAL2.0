@@ -91,7 +91,7 @@ body{
 .noticiasact.tres{
 	grid-column: 1/2;
 	grid-row: 2/3;
-	background-image: url("../noticias/n4/1.jpeg");
+	background-image: url("../noticias/n3/3.3.3.jpg");
 }
 .noticiasact.cuatro{
 	grid-column: 2/4;
@@ -199,7 +199,7 @@ body{
 .noticiasten.dos{
 	grid-column: 1/2;
 	grid-row: 2/3;
-	background-image: url("../noticias/n6/1.png");
+	background-image: url("../noticias/n6/1.jpg");
 }
 .noticiasten.tres{
 	grid-column: 2/3;
