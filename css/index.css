@@ -86,7 +86,7 @@ body{
 .noticiasact.dos{
 	grid-column: 3/4;
 	grid-row: 1/2;
-	background-image: url("../noticias/n2/1.png");
+	background-image: url("../noticias/n2/1.jpg");
 }
 .noticiasact.tres{
 	grid-column: 1/2;
