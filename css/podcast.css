@@ -14,7 +14,12 @@
 	padding: 30px 65px 0px;
 	font-size: 15pt;
 	line-height: 20pt;
-	font-weight: 600;
+}
+.txtintropodcast.dos .titulos2{
+	margin-bottom: 20px;
+}
+.intropodcast{
+	font-size: 12pt;
 }
 .barramorada{
 	background: #923E8F;
@@ -42,10 +47,18 @@
 	.contpodcast{
 		padding: 20px 50px 40px;
 	}
+	.txtintropodcast.dos .titulos2{
+		margin-bottom: 20px;
+		font-size: 22pt;
+	}
 }
 
 @media only screen and (max-width:575.98px){
 	.contpodcast{
 		padding: 20px 40px 30px;
+	}
+	.txtintropodcast.dos .titulos2{
+		margin-bottom: 20px;
+		font-size: 18pt;
 	}
 }

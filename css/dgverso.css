@@ -29,7 +29,7 @@ body{
   
   #close-button {
     margin-top: 10px;
-	font-size: 9pt;	  
+	font-size: 11pt;	  
 	  
   }
 #miBoton{
@@ -53,6 +53,10 @@ body{
 	#message{
 		font-size: 9pt;
 		width: 90%;
+  }
+	#close-button {
+	font-size: 9pt;	  
+	  
   }
 }
   
