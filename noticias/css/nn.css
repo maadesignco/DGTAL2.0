@@ -1,19 +1,18 @@
 @charset "utf-8";
 .container h2{
 	font-size: 22pt;
-	font-weight: 600;
 }
 .contnoticia{
-	margin: 0 0 0px 0;
+	padding: 0px 80px;
 }
-.contnoticia .jumbotron{
+.jumbotron{
 	padding: 60px 80px 50px;
 	background: #8c4895;
 	color: #fff;
+	border-radius: 0;
 }
 .jumbotron h1{
 	font-size: 33pt;
-	font-weight: 700;
 }
 .jumbotron .lead{
 	font-weight: 500;
@@ -26,6 +25,7 @@
 }
 .contnoticia .container{
 	margin: 50px auto;
+	padding: 0px 0px;
 }
 .container .row{
 	margin-top: 30px;
@@ -40,7 +40,15 @@
 	box-shadow: 0px 0px 7px rgba(0,0,0,0.7);
 }
 /*********************************************/
+@media only screen and (max-width:1200px){
+	.contnoticia{
+		padding: 0px 80px;
+	}
+}
 @media only screen and (max-width:991.98px){
+	.contnoticia{
+		padding: 0px 30px;
+	}
 	.contnoticia .container{
 		margin: 40px auto;
 	}
@@ -54,14 +62,20 @@
 	}
 }
 
+@media only screen and (max-width:768px){
+	.contnoticia{
+		padding: 0px 50px;
+	}
+}
+
 @media only screen and (max-width:575.98px){
-	.contnoticia .jumbotron{
+	.jumbotron{
 		padding: 40px 40px;
 		background: #8c4895;
 		color: #fff;
 	}
-	.contnoticia .contcuerponoticia{
-		padding: 0 20px;
+	.contnoticia{
+		padding: 0px 40px;
 	}
 	.contnoticia .container{
 		margin: 20px auto;
@@ -71,7 +85,6 @@
 	}
 	.jumbotron h1{
 		font-size: 20pt;
-		font-weight: 700;
 	}
 	.container h2{
 		font-size: 18pt;

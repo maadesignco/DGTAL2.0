@@ -1,0 +1,51 @@
+@charset "utf-8";
+.contimgpodcast{
+	background: #48C1BE;
+}
+.contpodcast .card{
+	margin: 15px 0px;
+}
+.imgpodcast{
+	width: 600px;
+	margin: 20px 0px 7px;
+}
+.txtintropodcast{
+	text-align: center;
+	padding: 30px 65px 0px;
+	font-size: 15pt;
+	line-height: 20pt;
+	font-weight: 600;
+}
+.barramorada{
+	background: #923E8F;
+	color: #923E8F;
+	text-align: center;
+}
+.contpodcast{
+	padding: 20px 85px 65px;
+}
+.card{
+	background:#eee;
+	border: solid 1px #bbc;
+}
+.card-title{
+	color: #4C2462;
+}
+/****************************************************************************************/
+@media only screen and (max-width:991.98px){
+	.contpodcast{
+		padding: 20px 60px 65px;
+	}
+}
+
+@media only screen and (max-width:768px){
+	.contpodcast{
+		padding: 20px 50px 40px;
+	}
+}
+
+@media only screen and (max-width:575.98px){
+	.contpodcast{
+		padding: 20px 40px 30px;
+	}
+}

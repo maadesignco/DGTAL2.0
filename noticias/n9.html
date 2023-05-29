@@ -8,51 +8,71 @@
     <!-- Bootstrap -->
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link rel="icon" type="image/png" href="images/favicon.png">  
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+	<script src="https://kit.fontawesome.com/592f727eea.js" crossorigin="anonymous"></script>    
 	<link href="../css/bootstrap-4.4.1.css" rel="stylesheet">
 	<link href="../css/index.css" rel="stylesheet">
 	<link href="css/nn.css" rel="stylesheet" type="text/css">
   </head>
 	
-<body style="padding-top: 95px">
+<body style="padding-top: 80px">
   	<!-- body code goes here -->
     <div class="container-fluid px-0">
     <!------------------------------------------------------NAVBAR--------------------------------------------------->
-     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-4 px-4"> <a class="navbar-brand" href="../indexingreso.html"><img src="../images/dgtalogo.svg" height="38px" alt=""></a>
+     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-3 px-4"> <a class="navbar-brand" href="../indexingreso.html"><img src="../images/dgtalogo.svg" height="38px" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav titulos4 mr-auto">
+			<li class="nav-item dropdown barrabusquedacel">
+                <div class="container-fluid d-flex">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+				</div>
+            </li>   
             <li class="nav-item"> <a class="nav-link" href="../indexingreso.html">Lo último <span class="sr-only">(current)</span></a> </li>
-            <li class="nav-item"> <a class="nav-link" href="../noticias.html">De todo</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="../dgverso.html">DGverso</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="../noticias.html">Tendencias</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="../dgpodcast.html">DGPodcast</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="../dgverso.html">DGverso</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="../dgverso.html">DGTema</a> </li>  
             <!--li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a> </div>
             </li-->
           </ul>
-          <ul class="navbar-nav profile">
+          <ul class="navbar-nav profile titulos4">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../images/fotoperfil.jpg" alt="">Miguel</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="../perfil.html">Perfil</a>
+                  <a class="dropdown-item" href="perfil.html">Perfil</a>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../index.html">Cerrar sesión</a>
+                  <a class="dropdown-item" href="index.html">Cerrar sesión</a>
                 </div>
               </li>
-          </ul>
+			  <li class="nav-item">
+				<li class="nav-item botonsuscribirse"> <a class="nav-link" href="premium.html">
+					<button type="button" class="btn">Suscríbete</button>
+					</a></li>
+              </li>
+		      <li class="nav-item dropdown botonbusquedaactivo">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				  <div class="container-fluid">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Busca" aria-label="Search">
+					</div>
+                </div>
+              </li>
+            </ul>
         </div>
       </nav>
-	</div>		
-	<!------------------------------------------------------------------------------------------------------------->  
-  	<div class="container-fluid contnoticia px-0">
+	
 	<!------------------------------------------------------------------------------------------------------------->	
 	  <div class="jumbotron">
-	    <h1>Los maravillosos ejercicios creativos de la canadiense Gab Bois</h1>
+	    <h1 class="titulos1">Los maravillosos ejercicios creativos de la canadiense Gab Bois</h1>
 	    <p class="lead mt-4">Sillones comestibles hechos panes y pastas, zapatos de verdura, ropa interior con frutas, entre miles de otros, ejercicios creativos que sorprenden y sobre todo inspiran.</p>
 	    <hr class="my-4">
 	    <p> <b>Autor:</b> Redactor para <a href="https://www.thepowermba.com/lt/" target="_blank"><i>Experimenta</i></a> </p>
-      </div>
+      </div>		
+	<!------------------------------------------------------------------------------------------------------------->  
+  	<div class="container-fluid contnoticia">
 	  <!------------------------------------------------------------------------------------------------------------->	
 	  <div class="container contcuerponoticia">
 		  <section class="container">
@@ -103,42 +123,42 @@
 		<nav aria-label="Page navigation example">
 			<!-- Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks-->
 			<ul class="pagination">
-			  <li class="page-item"> <a class="page-link btn" href="n8.html" aria-label="Previous"> <span aria-hidden="true">&laquo; Noticia anterior</span> <span class="sr-only">Previous</span> </a> </li>
-			  <li class="page-item"> <a class="page-link btn" href="n1.html" aria-label="Next"> <span aria-hidden="true">Noticia siguiente &raquo;</span> <span class="sr-only">Next</span> </a> </li>
-		  </ul>
+			  <li class="page-item mx-2"> <a class="page-link btn" href="n9.html" aria-label="Previous"> <span aria-hidden="true">&laquo; Noticia anterior</span> <span class="sr-only">Previous</span> </a> </li>
+			  <li class="page-item mx-2"> <a class="page-link btn" href="n2.html" aria-label="Next"> <span aria-hidden="true">Noticia siguiente &raquo;</span> <span class="sr-only">Next</span> </a> </li>
+		  	</ul>
 		</nav>
 		</div>
 	  </div>
     </div>
 	<!-----------------------------------------------------------------------------------------------------------------><footer class="bg-light text-center text-md-left mb-0 py-1">
           <div class="container px-5">
-            <div class="row pt-4">
+            <div class="row">
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">Links de interés</h4>
+                <h4 class="mb-4 titulos2">Links de interés</h4>
                 <ul class="list-unstyled">
-                  <li><a href="#">USTA - Sitio oficial</a></li>
-                  <li><a href="#">Facultad de Diseño Gráfico</a></li>
-                  <li><a href="#">Crai USTA</a></li>
+                  <li><a href="https://usantotomas.edu.co/inicio" target="_blank">USTA - Sitio oficial</a></li>
+                  <li><a href="https://usantotomas.edu.co/disenografico?hsCtaTracking=b7b5a2db-31fc-419f-9e78-9d9509d86c5d%7Cb9b2979b-9ab4-4bcb-8a68-4eceee2d569d" target="_blank">Facultad de Diseño Gráfico</a></li>
+                  <li><a href="https://crai.usta.edu.co/" target="_blank">Crai USTA</a></li>
                 </ul>
               </div>
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">+ info</h4>
+                <h4 class="mb-4 titulos2">+ info</h4>
                 <ul class="list-unstyled">
-                  <li><a href="https://bufasan.com/" target="_blank">Proyectos</a></li>
+                  <li><a href="#">Proyectos</a></li>
                   <li><a href="#">Únete a nosotros</a></li>
                 </ul>
               </div>
               <div class="col-md-6 pb-4">
-                <h4 class="mb-4">DGTAL. </h4>
+                <h4 class="mb-4 titulos2">DGTAL </h4>
                 <p>El portal de noticias donde las perspectivas cuentan. <br> De diseñadores para todo el mundo.</p>
               </div>
             </div>
-            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
-            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Beta 1.002<br>© DGTAL 2022. Todos los derechos reservados </p>
+            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="https://www.instagram.com/dgtal_/" class="d-block px-3" target="_blank"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
+            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Entrega 1.003<br>© DGTAL 2022. Todos los derechos reservados </p>
           </div>
         </footer>	
 	<!----------------------------------------------------------------------------------------------------------------->
-	  
+	</div>  
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="../js/jquery-3.4.1.min.js"></script>
 

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DGTAL-Inicio</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/592f727eea.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -14,24 +14,31 @@
     
   </head>
     
-  <body style="padding-top: 60px">
+  <body style="padding-top: 80px">
   	<!-- body code goes here -->
     <div class="container-fluid px-0">
     <!------------------------------------------------------NAVBAR--------------------------------------------------->
-     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-4 px-4"> <a class="navbar-brand" href="#"><img src="images/dgtalogo.svg" height="38px" alt=""></a>
+     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-3 px-4"> <a class="navbar-brand" href="#"><img src="images/dgtalogo.svg" height="38px" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav titulos4 mr-auto">
+			<li class="nav-item dropdown barrabusquedacel">
+                <div class="container-fluid d-flex">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+				</div>
+            </li>   
             <li class="nav-item active"> <a class="nav-link" href="#">Lo último <span class="sr-only">(current)</span></a> </li>
-            <li class="nav-item"> <a class="nav-link" href="noticias.html">De todo</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="dgverso.html">DGverso</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="noticias.html">Tendencias</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="dgpodcast.html">DGPodcast</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="dgverso.html">DGverso</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="dgverso.html">DGTema</a> </li>  
             <!--li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a> </div>
             </li-->
           </ul>
-          <ul class="navbar-nav profile">
+          <ul class="navbar-nav profile titulos4">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/fotoperfil.jpg" alt="">Miguel</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -40,92 +47,174 @@
                   <a class="dropdown-item" href="index.html">Cerrar sesión</a>
                 </div>
               </li>
+			  <li class="nav-item">
+				<li class="nav-item botonsuscribirse"> <a class="nav-link" href="premium.html">
+					<button type="button" class="btn">Suscríbete</button>
+					</a></li>
+              </li>
+		      <li class="nav-item dropdown botonbusquedaactivo">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				  <div class="container-fluid">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Busca" aria-label="Search">
+					</div>
+                </div>
+              </li>
             </ul>
         </div>
       </nav>
     
-    <!---------------------------------------------NOTICIAS Y PAUTA--------------------------------------------------->
+	<!---------------------------------------------CARRUSELPRESENTACION---------------------------------------------->
+	<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+	  <ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+      </ol>
+	  <div class="carousel-inner" role="listbox">
+	    <div class="carousel-item active"><a href="#"><img class="d-block mx-auto img-fluid carimg1" src="images/car1.jpg" alt="First slide"></a>
+        </div>
+	    <div class="carousel-item"><a href="dgverso.html"><img class="d-block mx-auto img-fluid carimg2" src="images/car2.jpg" alt="First slide"></a>
+        </div>
+	    <div class="carousel-item"><a href="dgpodcast.html"><img class="d-block mx-auto img-fluid carimg3" src="images/car3.jpg" alt="First slide"></a>
+        </div>
+      </div>
+	  <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+
+	<!---------------------------------------------NOTICIAS Y PAUTA--------------------------------------------------->
     <!--------------------ACTUALIDAD--------------------->
     <div class="container-fluid actualidad">
-		<h1 class="titgen">Actualidad</h1>
-		<div class="gridnoticiasact">
-			<a class="noticiasact uno" href="noticias/n1.html">
-			<div class="text">Desde pequeños hemos estado rodeados de superhéroes y villanos, con trajes llamativos y acordes a su personalidad, aquí te traemos la identidad de marca de algunos de ellos.</div>
-			<h1 class="titulonot actuno">Supermarcas: el diseño como aliado de los superhéroes</h1>	</a>
-			<a class="noticiasact dos" href="noticias/n2.html">
-			<div class="text">Después de 15 años, Pepsi decide renovar su logotipo e identidad visual, conmemorando a lo grande su trayectoria en la cultura pop de estos últimos 125 años</div>
-			<h1 class="titulonot actdos">Celebrando con un nuevo logotipo: los 125 años de Pepsi</h1>
-				</a>
-			<a class="noticiasact tres" href="noticias/n3.html">
-			<div class="text">Acompáñanos a homenajear a éstas cuatro mujeres pioneras del diseño gráfico en toda la historia.</div>
-			<h1 class="titulonot acttres">Las grandes diseñadoras que la "dieron toda"</h1>	
-				</a>
-			<a class="noticiasact cuatro" href="noticias/n4.html">
-			<div class="text">Con el tiempo llegan nuevos conocimientos que revolucionan todo lo visto antes y la transmedia dentro del diseño no es la excepción.</div>
-			<h1 class="titulonot actcuatro">Transmedia: narrativa, producción y/o diseño</h1>	
+      <div class="row">
+	     <div class="col-lg-7 col-md-12 col-sm-12 notprincipal">
+		   <a class="row h-100" href="noticias/n1.html">
+			 <div class="d-flex">
+			 <div class="card px-0 flex-fill h-100 col-lg-12 justify-content-center"> <img class="card-img-top" src="noticias/n1/1.jpg" alt="Card image cap">
+			   <div class="card-body">
+			     <h5 class="card-title titulos1 titprincip">Supermarcas: el diseño como aliado de los superhéroes</h5>
+			     <p class="card-text">Desde pequeños hemos estado rodeados de superhéroes y villanos, con trajes llamativos y acordes a su personalidad, aquí te traemos la identidad de marca de algunos de ellos.</p>
+				 <p class="autor autornot">Por Sebastián Vivarelli</p>  
+			     </div>
+		   		</div>
+				</div>   
+           	</a>
+	      </div>
+        <div class="col-lg-5 col-md-12 col-sm-12 barralat">
+		<div class="row mx-0 px-0 col-lg-12 col-md-12 col-sm-12 lomasreciente">
+			<h1 class="mb-0 titulos2 titsec">Lo más reciente</h1>
+			<div class="container-fluid px-0">
+				<hr class="mb-4 bg-secondary">
+			</div>
+		  </div>
+		<div class="row container-fluid noticiasbarralat px-0">
+			<div class="px-0 col-xl-12 col-lg-12 col-md-6 col-sm-12 filanoticia uno">
+				<a class="d-flex align-items-center" href="noticias/n2.html">
+					<h3 class="titulos2 px-3 py-2">Celebrando con un nuevo logotipo: los 125 años de Pepsi.</h3>
+					<img src="noticias/n2/1.jpg" class="ml-auto" alt="Placeholder image"> 
 				</a>
 			</div>
-	  </div>      
+			<div class="px-0 col-xl-12 col-lg-12 col-md-6 col-sm-12 filanoticia uno">
+				<a class="d-flex align-items-center" href="noticias/n3.html">
+					<h3 class="titulos2 px-3 py-2">Las grandes diseñadoras que la "dieron toda".</h3>
+					<img src="noticias/n3/1p.jpg" class="ml-auto" alt="Placeholder image"> 
+				</a>
+			</div>
+			<div class="px-0 col-xl-12 col-lg-12 col-md-6 col-sm-12 filanoticia uno">
+				<a class="d-flex align-items-center" href="noticias/n4.html">
+					<h3 class="titulos2 px-3 py-2">Transmedia: narrativa, producción y/o diseño.</h3>
+					<img src="noticias/n4/1.jpeg" class="ml-auto" alt="Placeholder image"> 
+				</a>
+			</div>
+			<div class="px-0 col-xl-12 col-lg-12 col-md-6 col-sm-12 filanoticia uno">
+				<a class="d-flex align-items-center" href="noticias/n5.html">
+					<h3 class="titulos2 px-3 py-2">Los 5 imperdibles del diseño grafico para 2023.</h3>
+					<img src="noticias/n5/1.jpeg" class="ml-auto" alt="Placeholder image"> 
+				</a>
+			</div>
+        </div>
+		</div>
+      </div>
+    </div>      
     <!--------------------JUMBOTRONPUBLICIDAD--------------------->
 	  	<a class="jbpublicidad" href="premium.html">
-        <div class="jumbotron jumbotronpublicidad mt-0 mb-0">
-          <p class="p1">Dale play a la mejor experiencia: sin anuncios y con contenidos exclusivos</p>
-          <p class="p2">Hazte DGPremium aquí</p>
-        </div>
-        </a>
+       	<img src="images/premium1.jpg" class="img-fluid imgpremium" alt="Placeholder image"> </a>
     <!--------------------TENDENCIA--------------------->
     <div class="container-fluid tendencia">
-		<h1 class="titgen">Tendencias</h1>
-		<div class="gridnoticiasten">
-			<a class="noticiasten uno" href="noticias/n5.html">
-				<div class="text">Ven y conoce estos 5 elementos que no pueden faltar a la hora de buscar un referente para diseñar tus piezas graficas en este año.</div>
-				<h1 class="titulonot tenuno">Los 5 imperdibles en el diseño grafico para 2023</h1>
-				</a>
-			<a class="noticiasten dos" href="noticias/n6.html">
-				<div class="text">Conoce los detalles del diseño y el concept art de los personajes que protagonizaran la nueva película de Pixar “Elemental”</div>
-				<h1 class="titulonot tendos">Pixar y su nuevo diseño de personajes "Elementales"</h1>
-				</a>
-			<a class="noticiasten tres" href="noticias/n7.html">
-				<div class="text">En los últimos meses la inteligencia artificial ha sido uno de los temas más debatidos en todos los campos, especialmente en el Diseño Gráfico.</div>
-				<h1 class="titulonot tentres">¿Los superpoderes de la IA deben asustarnos?</h1>
-				</a>
-			<a class="noticiasten cuatro" href="noticias/n8.html">
-				<div class="text">La nueva línea de Los diseñadores gráficos desde que estudiamos hasta que iniciamos nuestra vida profesional, pensamos que lo que vendemos es un diseño, pero ¿eso es realmente lo que los clientes nos compran? </div>
-				<h1 class="titulonot tencuatro">Los clientes no compran diseño</h1>
-				</a>
-			<a class="noticiasten cinco" href="noticias/n9.html">
-				<div class="text">Ejercicios creativos que sorprenden y sobre todo inspiran.</div>
-				<h1 class="titulonot tencinco">Los ejercicios creativos de la canadiense Gab Bois</h1>
-				</a>
-			</div>
-	  </div>   
+	<div class="row mx-0 px-0 col-lg-12 col-md-12 col-sm-12 tendenciastit">
+		<h1 class="mb-0 titulos2 titsec">Tendencias</h1>
+		<div class="container-fluid px-0">
+			<hr class="mb-4 bg-secondary">
+		</div>
+		</div>	
+	  <div class="row notten">
+		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 noticiasten uno">
+		  <a href="noticias/n6.html">
+			<div class="card px-0 col-xl-12"> <img class="card-img-top" src="noticias/n6/1.jpg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title titulos2 titnotsec2">Pixar y su nuevo diseño de personajes "Elementales"</h5>
+			    <p class="autor autornot">Por Sebastián Vivarelli</p>
+		      </div>
+		  </div>
+          </a>
+		  </div>
+	    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 noticiasten dos">
+		  <a href="noticias/n7.html">
+			<div class="card px-0 col-xl-12"> <img class="card-img-top" src="noticias/n7/1.jpeg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title titulos2 titnotsec2">¿Los superpoderes de la IA deben asustarnos?</h5>
+			    <p class="autor autornot">Por Sebastián Vivarelli</p>
+		      </div>
+		  </div>
+          </a>
+		  </div>
+		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 noticiasten tres">
+		  <a href="noticias/n9.html">
+		  <div class="card px-0 col-xl-12"> <img class="card-img-top" src="noticias/n9/1.jpeg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title titulos2 titnotsec2">Los ejercicios creativos de la canadiense Gab Bois</h5>
+			    <p class="autor autornot">Por Sebastián Vivarelli</p>
+		      </div>
+		  </div>
+          </a>
+		  </div>
+		<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 noticiasten cuatro">
+		  <a href="noticias/n8.html">
+		  <div class="card px-0 col-xl-12"> <img class="card-img-top" src="noticias/n8/1.jpeg" alt="Card image cap">
+			  <div class="card-body">
+			    <h5 class="card-title titulos2 titnotsec2">Los clientes no compran diseño. Te lo explicamos</h5>
+			    <p class="autor autornot">Por Sebastián Vivarelli</p>
+		      </div>
+		  </div>
+          </a>
+		  </div>  
+      </div>
+    </div>   
         
     <!---------------------------------------------------FOOTER--------------------------------------------------->    
         <footer class="bg-light text-center text-md-left mb-0 py-1">
           <div class="container px-5">
             <div class="row pt-4">
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">Links de interés</h4>
+                <h4 class="mb-4 titulos2">Links de interés</h4>
                 <ul class="list-unstyled">
-                  <li><a href="#">USTA - Sitio oficial</a></li>
-                  <li><a href="#">Facultad de Diseño Gráfico</a></li>
-                  <li><a href="#">Crai USTA</a></li>
+                  <li><a href="https://usantotomas.edu.co/inicio" target="_blank">USTA - Sitio oficial</a></li>
+                  <li><a href="https://usantotomas.edu.co/disenografico?hsCtaTracking=b7b5a2db-31fc-419f-9e78-9d9509d86c5d%7Cb9b2979b-9ab4-4bcb-8a68-4eceee2d569d" target="_blank">Facultad de Diseño Gráfico</a></li>
+                  <li><a href="https://crai.usta.edu.co/" target="_blank">Crai USTA</a></li>
                 </ul>
               </div>
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">+ info</h4>
+                <h4 class="mb-4 titulos2">+ info</h4>
                 <ul class="list-unstyled">
-                  <li><a href="https://bufasan.com/" target="_blank">Proyectos</a></li>
+                  <li><a href="#">Proyectos</a></li>
                   <li><a href="#">Únete a nosotros</a></li>
                 </ul>
               </div>
               <div class="col-md-6 pb-4">
-                <h4 class="mb-4">DGTAL. </h4>
+                <h4 class="mb-4 titulos2">DGTAL </h4>
                 <p>El portal de noticias donde las perspectivas cuentan. <br> De diseñadores para todo el mundo.</p>
               </div>
             </div>
-            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
-            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Beta 1.002<br>© DGTAL 2022. Todos los derechos reservados </p>
+            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="https://www.instagram.com/dgtal_/" class="d-block px-3" target="_blank"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
+            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Entrega 1.003<br>© DGTAL 2022. Todos los derechos reservados </p>
           </div>
         </footer>
             

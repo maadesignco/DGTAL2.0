@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>DGTAL-DGPremium</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/592f727eea.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -16,22 +16,29 @@
     
   <body style="padding-top: 80px">
   	<!-- body code goes here -->
-  <div class="container-fluid px-0">
+    <div class="container-fluid px-0">
     <!------------------------------------------------------NAVBAR--------------------------------------------------->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-4 px-4"> <a class="navbar-brand" href="indexingreso.html"><img src="images/dgtalogo.svg" height="38px" alt=""></a>
+     <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light py-3 px-4"> <a class="navbar-brand" href="indexingreso.html"><img src="images/dgtalogo.svg" height="38px" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-          <ul class="navbar-nav mx-auto">
+          <ul class="navbar-nav titulos4 mr-auto">
+			<li class="nav-item dropdown barrabusquedacel">
+                <div class="container-fluid">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+				</div>
+            </li>   
             <li class="nav-item"> <a class="nav-link" href="indexingreso.html">Lo último <span class="sr-only">(current)</span></a> </li>
-            <li class="nav-item"> <a class="nav-link" href="noticias.html">De todo</a> </li>
-            <li class="nav-item"> <a class="nav-link" href="dgverso.html">DGverso</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="noticias.html">Tendencias</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="dgpodcast.html">DGPodcast</a> </li>  
+            <li class="nav-item"> <a class="nav-link" href="dgverso.html">DGverso</a> </li>
+			<li class="nav-item"> <a class="nav-link" href="dgverso.html">DGTema</a> </li>  
             <!--li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Something else here</a> </div>
             </li-->
           </ul>
-          <ul class="navbar-nav profile">
+          <ul class="navbar-nav profile titulos4">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/fotoperfil.jpg" alt="">Miguel</a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
@@ -40,28 +47,36 @@
                   <a class="dropdown-item" href="index.html">Cerrar sesión</a>
                 </div>
               </li>
-          </ul>
+			  <li class="nav-item">
+				<li class="nav-item botonsuscribirse"> <a class="nav-link disabled" href="#">
+					<button type="button" class="btn disabled">Suscríbete</button>
+					</a></li>
+              </li>
+		      <li class="nav-item dropdown botonbusquedaactivo">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+				  <div class="container-fluid">
+					<input class=" form-control mr-sm-2" type="search" placeholder="Busca" aria-label="Search">
+					</div>
+                </div>
+              </li>
+            </ul>
         </div>
-    </nav>
-    </div>
+      </nav>
+	  
 	<!--------------------JUMBOTRONPUBLICIDAD--------------------->
-	  	<div class="jbpublicidad">
-        <div class="jumbotron jumbotronpublicidad mt-0 mb-0">
-          <p class="p1">DGPremium es la llave a la mejor experiencia</p>
-          <p class="p2">• Todos los contenidos completos <br>• Entrevistas exclusivas<br>• Acceso previo a lanzamientos<br>• Invitaciones especiales</p>
-		  <p class="p2">Y muchos beneficios más</p>	
-        </div>
-        </div>
+    <a class="jbpublicidad" href="premium.html">
+    	<img src="images/premium2.jpg" class="img-fluid imgpremium imgpremium2" alt="Placeholder image"> </a>
 	<!----------------------------------------------TXTADICIONAL----------------------------------------------->
 	<div class="container-fluid textoadicional mx-auto my-4">
-	  <h3>Para hacer parte de los beneficios, solo debes seguir estos pasos, ¡y ya estaría!</h3>
+	  <h3>Para hacer parte estos y más beneficios, solo debes seguir estos pasos, ¡y ya estaría!</h3>
 	  </div>  
 	<!----------------------------------------------SUSCRIPCIONES---------------------------------------------->  
     <div class="container-fluid pagos">
 	  <div class="row contpago">
 		  <div class="col-lg-6 pagopaso1">
 			<div class="container-fluid continfopagopaso1">
-			<h2 class="col-lg-12">Paso 1: Elige cómo quieres suscribirte</h2>
+			<h2 class="col-lg-12 titulos3">Paso 1: Elige cómo quieres suscribirte</h2>
 			<hr class="my-3"> 	
 			<div class="row botonespagopaso1 mx-2">
 			  <div class="col-lg-6 col-md-6 col-sm-6 btn1">
@@ -81,7 +96,7 @@
           </div>
 		  <div class="col-lg-6 pagopaso2">
 			<div class="container-fluid continfopagopaso2"> 
-			<h2 class="col-lg-12">Paso 2: Paga seguro por PSE</h2>
+			<h2 class="col-lg-12 titulos3">Paso 2: Paga seguro por PSE</h2>
 			<hr class="my-3"> 	
 			<div class="row">
 			  <div class="col-lg-4 col-md-3 my-auto imgpse">
@@ -146,31 +161,32 @@
           <div class="container px-5">
             <div class="row pt-4">
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">Links de interés</h4>
+                <h4 class="mb-4 titulos2">Links de interés</h4>
                 <ul class="list-unstyled">
-                  <li><a href="#">USTA - Sitio oficial</a></li>
-                  <li><a href="#">Facultad de Diseño Gráfico</a></li>
-                  <li><a href="#">Crai USTA</a></li>
+                  <li><a href="https://usantotomas.edu.co/inicio" target="_blank">USTA - Sitio oficial</a></li>
+                  <li><a href="https://usantotomas.edu.co/disenografico?hsCtaTracking=b7b5a2db-31fc-419f-9e78-9d9509d86c5d%7Cb9b2979b-9ab4-4bcb-8a68-4eceee2d569d" target="_blank">Facultad de Diseño Gráfico</a></li>
+                  <li><a href="https://crai.usta.edu.co/" target="_blank">Crai USTA</a></li>
                 </ul>
               </div>
               <div class="col-sm-6 col-md-3 pb-4">
-                <h4 class="mb-4">+ info</h4>
+                <h4 class="mb-4 titulos2">+ info</h4>
                 <ul class="list-unstyled">
-                  <li><a href="https://bufasan.com/" target="_blank">Proyectos</a></li>
+                  <li><a href="#">Proyectos</a></li>
                   <li><a href="#">Únete a nosotros</a></li>
                 </ul>
               </div>
               <div class="col-md-6 pb-4">
-                <h4 class="mb-4">DGTAL. </h4>
+                <h4 class="mb-4 titulos2">DGTAL </h4>
                 <p>El portal de noticias donde las perspectivas cuentan. <br> De diseñadores para todo el mundo.</p>
               </div>
             </div>
-            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
-            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Beta 1.002<br>© DGTAL 2022. Todos los derechos reservados </p>
+            <div class="redesbottom col d-flex justify-content-center mb-4"> <a href="#" class="d-block px-3"><i class="fa fa-whatsapp"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-facebook-square"></i></a> <a href="https://www.instagram.com/dgtal_/" class="d-block px-3" target="_blank"><i class="fa fa-instagram"></i></a> <a href="#" class="d-block px-3"><i class="fa fa-google"></i></a> </div>
+            <p class="text-center text-secondary border-top border-secondary py-4 mb-0"> MAADesign © 2023 <br> Versión Entrega 1.003<br>© DGTAL 2022. Todos los derechos reservados </p>
           </div>
         </footer>
-            
-  <!---------------------------------------------------REDESLAT--------------------------------------------------->     
+  <!---------------------------------------------------REDESLAT--------------------------------------------------->      
+	  </div>
+     
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-3.4.1.min.js"></script>
 
